@@ -7,7 +7,8 @@ export default defineConfig({
     video: false,
     screenshotOnRunFailure: false,
     setupNodeEvents(on, config) {
-      // Codigo existente no modificar
+      // IMPORTANT return the updated config object
+      return config;
     }
   }
 });
