@@ -12,7 +12,7 @@ describe("Buy a t-shirt", () => {
     cy.get("#passwd").type("WorkshopProtractor");
 
     cy.get("#SubmitLogin").click();
-    cy.get("#center_column button").click();
+    cy.get(".cart_navigation button").click();
     cy.get("#cgv").check();
     cy.get("#form button").click();
     cy.get("#HOOK_PAYMENT a.bankwire").click();
