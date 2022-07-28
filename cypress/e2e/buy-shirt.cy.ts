@@ -5,8 +5,8 @@ import {
   LoginPage,
   AddressStepPage,
   ShippingStepPage,
-  PaymentStepPage
-} from '../page/index';
+  PaymentStepPage,
+} from "../page/index";
 
 const menuContentPage = new MenuContentPage();
 const productsListPage = new ProductsListPage();
@@ -16,15 +16,15 @@ const addressStepPage = new AddressStepPage();
 const shippingStepPage = new ShippingStepPage();
 const paymentStepPage = new PaymentStepPage();
 
-describe('Buy a t-shirt', () => {
-  it('then should be bought a t-shirt', () => {
+describe("Buy a t-shirt", () => {
+  it("then should be bought a t-shirt", () => {
     const userData = {
-      emailUser: 'aperdomobo@gmail.com',
-      emailPassword: 'WorkshopProtractor'
+      emailUser: "aperdomobo@gmail.com",
+      emailPassword: "WorkshopProtractor",
     };
 
     const response = {
-      successPurchase: 'Your order on My Store is complete.'
+      successPurchase: "Your order on My Store is complete.",
     };
 
     menuContentPage.visitMenuContentPage();
