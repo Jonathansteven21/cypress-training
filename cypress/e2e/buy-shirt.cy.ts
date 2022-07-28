@@ -1,11 +1,12 @@
-import _ = require("cypress/types/lodash");
-import {MenuContentPage} from "../page/index";
-import {ProductsListPage} from "../page/index";
-import {ShopingCartPage} from "../page/index";
-import {LoginPage} from "../page/index";
-import {AddressStepPage} from "../page/index";
-import {ShippingStepPage} from "../page/index";
-import {PaymentStepPage} from "../page/index";
+import {
+  MenuContentPage,
+  ProductsListPage,
+  ShopingCartPage,
+  LoginPage,
+  AddressStepPage,
+  ShippingStepPage,
+  PaymentStepPage
+} from '../page/index';
 
 const menuContentPage = new MenuContentPage();
 const productsListPage = new ProductsListPage();
@@ -15,8 +16,17 @@ const addressStepPage = new AddressStepPage();
 const shippingStepPage = new ShippingStepPage();
 const paymentStepPage = new PaymentStepPage();
 
-describe("Buy a t-shirt", () => {
-  it("then should be bought a t-shirt", () => {
+describe('Buy a t-shirt', () => {
+  it('then should be bought a t-shirt', () => {
+    const userData = {
+      emailUser: 'aperdomobo@gmail.com',
+      emailPassword: 'WorkshopProtractor'
+    };
+
+    const response = {
+      successPurchase: 'Your order on My Store is complete.'
+    };
+
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
 
@@ -25,9 +35,7 @@ describe("Buy a t-shirt", () => {
 
     shopingCartPage.clickProceedCheckoutBtn();
 
-    loginPage.typeEmailUser();
-    loginPage.typePasswordUser();
-    loginPage.clickProceedSubmitLoginBtn();
+    loginPage.login(userData.emailUser, userData.emailPassword);
 
     addressStepPage.clickProceedCheckoutBtn();
 
@@ -35,12 +43,7 @@ describe("Buy a t-shirt", () => {
     shippingStepPage.clickProceedCheckoutBtn();
 
     paymentStepPage.clickBankWireBtn();
-
-    cy.get("#cart_navigation button").click();
-
-    cy.get("#center_column > div > p > strong").should(
-        "have.text",
-        "Your order on My Store is complete.",
-    );
+    paymentStepPage.clickProceedPaymentBtn();
+    paymentStepPage.getConfirmationMessage(response.successPurchase);
   });
 });
