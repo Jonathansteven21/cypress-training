@@ -1,11 +1,13 @@
 import _ = require("cypress/types/lodash");
-import {MenuContentPage} from "../page/index";
-import {ProductsListPage} from "../page/index";
-import {ShopingCartPage} from "../page/index";
-import {LoginPage} from "../page/index";
-import {AddressStepPage} from "../page/index";
-import {ShippingStepPage} from "../page/index";
-import {PaymentStepPage} from "../page/index";
+import {
+  MenuContentPage,
+  ProductslistPage,
+  ShopingCartPage,
+  LoginPage,
+  AdressStepPage,
+  ShippingStepPage,
+  PaymentStepPage
+} from "../page/index";
 
 const menuContentPage = new MenuContentPage();
 const productsListPage = new ProductsListPage();
