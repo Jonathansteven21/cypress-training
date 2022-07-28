@@ -17,8 +17,8 @@ class PaymentStepPage {
     cy.get(this.proceedPaymentBtn).click();
   }
 
-  public getConfirmationMessage(Message: string) {
-    cy.get(this.confirmationMessageText).should('have.text', Message);
+  public getConfirmationMessage(): void {
+    return cy.get(this.confirmationMessageText);
   }
 }
 

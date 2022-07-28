@@ -23,10 +23,6 @@ describe("Buy a t-shirt", () => {
       emailPassword: "WorkshopProtractor",
     };
 
-    const response = {
-      successPurchase: "Your order on My Store is complete.",
-    };
-
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
 
@@ -44,6 +40,8 @@ describe("Buy a t-shirt", () => {
 
     paymentStepPage.clickBankWireBtn();
     paymentStepPage.clickProceedPaymentBtn();
-    paymentStepPage.getConfirmationMessage(response.successPurchase);
+    paymentStepPage
+        .getConfirmationMessage()
+        .should("have.text", "Your order on My Store is complete.");
   });
 });
