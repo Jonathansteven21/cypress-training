@@ -21,5 +21,4 @@ class PaymentStepPage {
     return cy.get(this.confirmationMessageText);
   }
 }
-
 export { PaymentStepPage };
