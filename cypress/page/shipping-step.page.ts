@@ -3,8 +3,8 @@ class ShippingStepPage {
   private proceedCheckoutBtn: string;
 
   constructor() {
-    this.checkTerms = '.checker input';
-    this.proceedCheckoutBtn = '.cart_navigation .standard-checkout';
+    this.checkTerms = '#cgv';
+    this.proceedCheckoutBtn = 'button[name="processCarrier"]';
   }
 
   public checkTermsCheckbox(): void {
