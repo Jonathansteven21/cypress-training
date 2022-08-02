@@ -4,9 +4,9 @@ class PaymentStepPage {
   private confirmationMessageText: string;
 
   constructor() {
-    this.bankWireBtn = '#HOOK_PAYMENT a.bankwire';
-    this.proceedPaymentBtn = '#cart_navigation button';
-    this.confirmationMessageText = '#center_column > div > p > strong';
+    this.bankWireBtn = '.payment_module .bankwire';
+    this.proceedPaymentBtn = '#cart_navigation .button-medium';
+    this.confirmationMessageText = '#center_column .cheque-indent strong';
   }
 
   public clickBankWireBtn(): void {

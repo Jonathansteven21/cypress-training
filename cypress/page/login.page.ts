@@ -4,8 +4,8 @@ class LoginPage {
   private proceedSubmitLoginBtn: string;
 
   constructor() {
-    this.typeEmail = '#email';
-    this.typePassword = '#passwd';
+    this.typeEmail = '#login_form #email';
+    this.typePassword = '#login_form #passwd';
     this.proceedSubmitLoginBtn = '#SubmitLogin';
   }
 
