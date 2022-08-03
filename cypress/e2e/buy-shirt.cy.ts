@@ -5,8 +5,7 @@ import {
   LoginPage,
   AddressStepPage,
   ShippingStepPage,
-  PaymentStepPage,
-  ShirtsListPage
+  PaymentStepPage
 } from '../page/index';
 
 const menuContentPage = new MenuContentPage();
@@ -16,7 +15,6 @@ const loginPage = new LoginPage();
 const addressStepPage = new AddressStepPage();
 const shippingStepPage = new ShippingStepPage();
 const paymentStepPage = new PaymentStepPage();
-const shirtsListPage = new ShirtsListPage();
 
 describe('Buy a t-shirt', () => {
   it('then should be bought a t-shirt', () => {
@@ -25,17 +23,12 @@ describe('Buy a t-shirt', () => {
       emailUser: 'aperdomobo@gmail.com',
       emailPassword: 'WorkshopProtractor'
     };
-    let tShirtList = [
-      '\n\t\t\t\t\t\t\tFaded Short Sleeve T-shirts\n\t\t\t\t\t\t'
-    ];
     menuContentPage.visitMenuContentPage();
 
     // Act
     menuContentPage.goToTShirtMenu();
 
     // Assert
-    shirtsListPage.validateItemsNumber(tShirtList.length);
-    shirtsListPage.validateItemsNames(tShirtList);
     productsListPage.clickAddCartBtn();
     productsListPage.clickProceedCheckoutBtn();
 

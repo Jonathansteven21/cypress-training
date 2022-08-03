@@ -6,4 +6,3 @@ export { AddressStepPage } from './address-step.page';
 export { ShippingStepPage } from './shipping-step.page';
 export { PaymentStepPage } from './payment-step.page';
 export { DressesListPage } from './dresses-list.page';
-export { ShirtsListPage } from './shirts-list.page';
