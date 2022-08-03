@@ -5,8 +5,8 @@ import {
   LoginPage,
   AddressStepPage,
   ShippingStepPage,
-  PaymentStepPage
-} from '../page/index';
+  PaymentStepPage,
+} from "../page/index";
 
 const menuContentPage = new MenuContentPage();
 const productsListPage = new ProductsListPage();
@@ -16,12 +16,12 @@ const addressStepPage = new AddressStepPage();
 const shippingStepPage = new ShippingStepPage();
 const paymentStepPage = new PaymentStepPage();
 
-describe('Buy a t-shirt', () => {
-  it('then should be bought a t-shirt', () => {
+describe("Buy a t-shirt", () => {
+  it("then should be bought a t-shirt", () => {
     // Arrange
     const userData = {
-      emailUser: 'aperdomobo@gmail.com',
-      emailPassword: 'WorkshopProtractor'
+      emailUser: "aperdomobo@gmail.com",
+      emailPassword: "WorkshopProtractor",
     };
     menuContentPage.visitMenuContentPage();
 
@@ -44,7 +44,7 @@ describe('Buy a t-shirt', () => {
     paymentStepPage.clickBankWireBtn();
     paymentStepPage.clickProceedPaymentBtn();
     paymentStepPage
-      .getConfirmationMessage()
-      .should('have.text', 'Your order on My Store is complete.');
+        .getConfirmationMessage()
+        .should("have.text", "Your order on My Store is complete.");
   });
 });

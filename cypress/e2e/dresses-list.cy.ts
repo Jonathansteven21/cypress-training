@@ -1,6 +1,6 @@
-import { MenuContentPage, DressesListPage } from '../page/index';
+import {MenuContentPage, DressesListPage} from "../page/index";
 
-describe('the user navigates to the dresses page should', () => {
+describe("the user navigates to the dresses page should", () => {
   let menuContentPage: MenuContentPage;
   let dressesListPage: DressesListPage;
 
@@ -9,14 +9,14 @@ describe('the user navigates to the dresses page should', () => {
     dressesListPage = new DressesListPage();
   });
 
-  it('show the available dresses', () => {
+  it("show the available dresses", () => {
     // Arrange
     const dressesList = [
-      'Printed Dress',
-      'Printed Dress',
-      'Printed Summer Dress',
-      'Printed Summer Dress',
-      'Printed Chiffon Dress'
+      "Printed Dress",
+      "Printed Dress",
+      "Printed Summer Dress",
+      "Printed Summer Dress",
+      "Printed Chiffon Dress",
     ];
     menuContentPage.visitMenuContentPage();
 
