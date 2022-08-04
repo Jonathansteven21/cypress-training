@@ -23,13 +23,14 @@ describe("Buy a t-shirt", () => {
       emailUser: "aperdomobo@gmail.com",
       emailPassword: "WorkshopProtractor",
     };
+    const shirtTitle = "Faded Short Sleeve T-shirts";
     menuContentPage.visitMenuContentPage();
 
     // Act
     menuContentPage.goToTShirtMenu();
 
     // Assert
-    productsListPage.clickAddCartBtn();
+    productsListPage.clickAddCartBtn(shirtTitle);
     productsListPage.clickProceedCheckoutBtn();
 
     shopingCartPage.clickProceedCheckoutBtn();
