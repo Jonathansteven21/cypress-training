@@ -6,8 +6,8 @@
   "scripts": {
     "test": "cypress run",
     "test:open": "npm run lint && cypress open",
-    "test:pre": "npm run reports:clean",
-    "test:post": "npm run combine:reports && npm run generate:reports",
+    "pretest": "npm run reports:clean",
+    "posttest": "npm run combine:reports && npm run generate:reports",
     "lint": "eslint ./cypress/e2e/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "reports:clean": "rm -r cypress/reports/*",
