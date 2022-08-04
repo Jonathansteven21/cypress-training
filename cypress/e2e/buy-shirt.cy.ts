@@ -18,14 +18,17 @@ const paymentStepPage = new PaymentStepPage();
 
 describe("Buy a t-shirt", () => {
   it("then should be bought a t-shirt", () => {
+    // Arrange
     const userData = {
       emailUser: "aperdomobo@gmail.com",
       emailPassword: "WorkshopProtractor",
     };
-
     menuContentPage.visitMenuContentPage();
+
+    // Act
     menuContentPage.goToTShirtMenu();
 
+    // Assert
     productsListPage.clickAddCartBtn();
     productsListPage.clickProceedCheckoutBtn();
 
